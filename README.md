@@ -14,7 +14,8 @@ Usage
 
 Example
 =======
-This graph shows the mininum, median, and maximum latency from a test server through our core switches and core router. You can clearly see a bursty flow that starts at 19:30 and causes a long-tail latency behavior.
+This graph shows the minimum, median, and maximum latency from a test server through our core switches and core router. You can clearly see a bursty flow that starts at 19:30 and causes a long-tail latency behavior.
+Larger congestions are often visible as latency spikes in the range of hundreds of microseconds. 
 ![Example screenshot](./example.png)
 
 Hardware requirements and constraints

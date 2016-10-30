@@ -1,6 +1,8 @@
 This script measures the latency of a network between two NICs.
 It tries to take one high-precision timestamp every millisecond using hardware timestamping on Intel NICs.
 Results are saved as histograms and metrics like the maximum and 99th percentile can be exported to a graphite server.
+This can be used to monitor the latency of your network and detect congestion.
+
 
 Usage
 =====
@@ -10,6 +12,10 @@ Usage
 ```/path/to/libmoon latency-monitoring.lua --gateway <gateway IP> --src <src IP> --dst <dst IP> --graphite <graphite-server:line protocol port> --out-dir /path/for/histograms <tx port> <rx port>```
 4. Use ```--help``` to see further options
 
+Example
+=======
+This graph shows the mininum, median, and maximum latency from a test server through our core switches and core router. You can clearly see a bursty flow that starts at 19:30 and causes a long-tail latency behavior.
+![Example screenshot](./example.png)
 
 Hardware requirements and constraints
 =====================================
